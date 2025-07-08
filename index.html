@@ -3,134 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi Dev - Developer Portfolio</title>
+    <title>Abhijnan Shariah - Web Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <span class="brand-text">Hi</span><span class="brand-dev">Dev</span>
-                <span class="brand-subtitle">Developer Portfolio</span>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="logo-animation">
+                <div class="logo-circle">
+                    <span>AS</span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+            <div class="loading-text">Loading Experience...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-3d">
+                    <span class="logo-text">Abhijnan Sahariah</span>
+                    <div class="logo-glow"></div>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#achievements" class="nav-link" data-text="Achievements">Achievements</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
             </ul>
-            <button class="hire-btn">
-                <i class="fas fa-briefcase"></i>
-                Hire me
-            </button>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-extras">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div class="particle-container" id="particleContainer"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="color-indicator">#291C3A</div>
-                <h1 class="hero-title">Hello 👋,</h1>
-                <h2 class="hero-subtitle">I'm a web <span class="highlight">Developer</span></h2>
-                <p class="hero-description">I build things for web</p>
+        <div class="hero-background">
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">
+                    <span class="wave">👋</span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">
+                        <span class="gradient-text typing-text" id="typingText">Abhijnan Sahariah</span>
+                    </span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-text" id="roleText">Student Developer</span>
+                </div>
+                <p class="hero-description">
+                    A passionate 14-year-old Class 9 student of PM SHRI KENDRIYA VIDYALAYA MANGALDOI exploring the infinite possibilities of code,
+                    creating immersive games and building extraordinary digital experiences that inspire and amaze.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
                 
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">Explore My Work</span>
+                        <div class="btn-particles"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-text">Let's Connect</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    <a href="AbhijnanSahariah1" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="Abhijnan_s.1" class="social-link" data-tooltip="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="AbhijnanSahariah18@gmail.com" class="social-link" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
-  <div class="avatar-container">
-    <img src="Abhijnan1.jpg" alt="Profile" class="profile-photo">
-  </div>
-</div>
-
-        
+                <div class="profile-container">
+                    <div class="profile-card-3d">
+                        <div class="card-face card-front">
+                            <div class="profile-avatar">
+                                <div class="avatar-glow"></div>
+                                <img src="Abhijnan1.jpg" alt="AbhijnanSahariah" class="profile-image">
+                                
+                                <div class="status-indicator">
+                                    <div class="status-dot"></div>
+                                    <span>Available for projects</span>
+                                </div>
+                            </div>
+                            <div class="profile-info">
+                                <h3>Abhijnan Sahariah</h3>
+                                <p>Class 9 Student</p>
+                                <div class="tech-stack">
+                                    <span class="tech-item">HTML</span>
+                                    <span class="tech-item">CSS</span>
+                                    <span class="tech-item">JS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="achievements-preview">
+                                <h4>Quick Stats</h4>
+                                <div class="mini-stats">
+                                    <div class="mini-stat">
+                                        <i class="fas fa-code"></i>
+                                        <span>3 Projects</span>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <i class="fas fa-trophy"></i>
+                                        <span>Top Student</span>
+                                    </div>
+                                    <div class="mini-stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>AI Enthusiast</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s">💻</div>
+                    <div class="floating-icon" style="--delay: 1s">🎮</div>
+                    <div class="floating-icon" style="--delay: 2s">🚀</div>
+                    <div class="floating-icon" style="--delay: 3s">⚡</div>
+                </div>
             </div>
         </div>
-        <div class="hero-waves"></div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="color-indicator-2">#331C52</div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">2</span>
-                    <div class="stat-text">
-                        <span>YEARS OF</span>
-                        <span>EXPERIENCE</span>
-                    </div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5</span>
-                    <div class="stat-text">
-                        <span>PROJECTS COMPLETED</span>
-                        
-                    </div>
-                </div>
-                <div class="tech-icons">
-                    <div class="tech-icon js">JS</div>
-                    <div class="tech-icon html">HTML5</div>
-                    <div class="tech-icon css">CSS3</div>
-                    <div class="tech-icon react">React</div>
-                    <div class="tech-icon redux">Python</div>
-                    <div class="tech-icon node">Node</div>
-              
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
             </div>
+            <span>Scroll to explore</span>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-grid">
-                <div class="color-indicators">
-                    <div class="color-block" style="background: #8121D0;">#8121D0</div>
-                    <div class="color-block" style="background: #DCCFED;">#DCCFED</div>
-                    <div class="color-block" style="background: #E1EBED;">#E1EBED</div>
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Discovering the person behind the code</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">🎯</div>
+                        <h3>My Journey</h3>
+                        <p>
+                            I'm a 14-year-old student in Class 9 with an insatiable passion for technology and programming. 
+                            My coding journey began two years ago, and since then, I've been captivated by the magic of 
+                            transforming ideas into interactive digital experiences.
+                        </p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">💡</div>
+                        <h3>What Drives Me</h3>
+                        <p>
+                            I'm passionate about solving complex problems and creating engaging experiences that people love. 
+                            From developing AI-powered games to designing beautiful interfaces, I'm constantly pushing the 
+                            boundaries of what's possible with code.
+                        </p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">🌟</div>
+                        <h3>Beyond Coding</h3>
+                        <p>
+                            When I'm not immersed in code, you'll find me exploring the latest tech trends, playing strategic 
+                            games that inspire my projects, or diving deep into mathematics and science - subjects that fuel 
+                            my logical thinking and problem-solving abilities.
+                        </p>
+                    </div>
                 </div>
-                <div class="about-content">
-                    <h2>About me</h2>
-                    <p>As A Web Developer, I Am Responsible For Designing And Developing Web Pages. My Primary Focus Is To Create Responsive, User-Friendly Experiences That Meet The Needs Of A Diverse Online Audience.</p>
+                <div class="about-visual">
+                    <div class="timeline">
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2023</h4>
+                                <p>Started learning HTML & CSS</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2024</h4>
+                                <p>Mastered JavaScript & Game Development</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2025</h4>
+                                <p>Building AI-powered applications</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skills-content">
-                    <h2>My Skills</h2>
-                    <p>Technologies I've been working with recently</p>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon js-icon">JS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I know</span>
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies I've mastered and projects I've built</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon">🌐</div>
+                            <h3>Frontend Development</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon html-icon">HTML5</div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon css-icon">CSS3</div>
+                    </div>
+
+                    <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon">🎮</div>
+                            <h3>Game Development</h3>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon react-icon">React</div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Canvas API</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Game Logic</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AI Algorithms</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+                                </div>
+                            </div>
                         </div>
-                    
-                        <div class="skill-item">
-                            <div class="skill-icon node-icon">Node</div>
+                    </div>
+
+                    <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="category-header">
+                            <div class="category-icon">🎨</div>
+                            <h3>Design & Tools</h3>
                         </div>
-                       
-                        <div class="skill-item">
-                            <div class="skill-icon python-icon">Python</div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -140,40 +381,255 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="color-indicator-white">#FFFFFF</div>
-            <h2 class="section-title">My Projects</h2>
-            <p class="section-subtitle">Some Things I've built so far</p>
+            <div class="section-header">
+                <span class="section-tag">My work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my best work and creative solutions</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: GameHub Pro -->
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="game-preview">
+                                <div class="game-icons">
+                                    <span class="game-icon-item">🎮</span>
+                                    <span class="game-icon-item">🧠</span>
+                                    <span class="game-icon-item">🐦</span>
+                                    <span class="game-icon-item">🐍</span>
+                                </div>
+                                <h3>GameHub Pro</h3>
+                                <div class="preview-stats">
+                                    <span>4 Games</span>
+                                    <span>AI Powered</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="mult game.html" class="project-link" target="_blank">
+                                    <i class="fas fa-play"></i>
+                                    <span>Play Games</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>GameHub Pro</h3>
+                            <div class="project-status">
+                                <span class="status-dot"></span>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            
+                        </div>
+                        <p class="project-description">
+                            A comprehensive multi-game platform featuring four classic games with modern twists. 
+                            Includes AI-powered Tic Tac Toe, Memory Game, Flappy Bird, and Snake - all built 
+                            with vanilla JavaScript and featuring stunning animations.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-robot"></i>
+                                <span>AI-powered gameplay</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Fully responsive</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-trophy"></i>
+                                <span>Score tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-   
-         <div class="project-card" style="background-image: url('project1.jpg');">
-        <h3>UIX Portfolio Website</h3>
-        <p>Website Landing page for a UI/UX Designer Portfolio</p>
-        <a href="#" class="project-btn">🔗 View Demo</a>
-        <a href="https://github.com/yourusername/uix-portfolio" target="_blank" class="project-btn">💻 View Code</a>
-      </div>
+                <!-- Project 2: Portfolio Website -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="portfolio-preview">
+                                <div class="preview-browser">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="preview-content">
+                                    <div class="preview-nav"></div>
+                                    <div class="preview-hero">
+                                        <div class="preview-text">
+                                            <div class="text-line"></div>
+                                            <div class="text-line short"></div>
+                                        </div>
+                                        <div class="preview-image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="Index.html" class="project-link"target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Portfolio Website</h3>
+                            <div class="project-status">
+                                <span class="status-dot"></span>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Animations</span>
+                        </div>
+                        <p class="project-description">
+                            A modern, responsive portfolio website showcasing advanced CSS animations, 
+                            3D effects, and interactive elements. Features smooth scrolling, particle 
+                            systems, and a beautiful glassmorphism design.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-magic"></i>
+                                <span>Advanced animations</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-cube"></i>
+                                <span>3D effects</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-palette"></i>
+                                <span>Modern design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="project-card" style="background-image: url('project2.jpg');">
-        <h3>LOZAN Ecommerce Web</h3>
-        <p>Ecommerce website for fashion that selling Arabic abaya</p>
-        <a href="#" class="project-btn">🔗 View Demo</a>
-        <a href="https://github.com/yourusername/lozan-ecommerce" target="_blank" class="project-btn">💻 View Code</a>
-      </div>
+                <!-- Project 3: Smart Calculator -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <div class="calculator-preview">
+                                <div class="calc-display">
+                                    <span class="calc-result">42</span>
+                                </div>
+                                <div class="calc-buttons">
+                                    <div class="calc-row">
+                                        <button class="calc-btn">C</button>
+                                        <button class="calc-btn">±</button>
+                                        <button class="calc-btn">%</button>
+                                        <button class="calc-btn operator">÷</button>
+                                    </div>
+                                    <div class="calc-row">
+                                        <button class="calc-btn">7</button>
+                                        <button class="calc-btn">8</button>
+                                        <button class="calc-btn">9</button>
+                                        <button class="calc-btn operator">×</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="calculator.html" class="project-link"target="_blank">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Try Calculator</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Smart Calculator</h3>
+                            <div class="project-status">
+                                <span class="status-dot"></span>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Math.js</span>
+                        </div>
+                        <p class="project-description">
+                            An intelligent calculator with advanced mathematical functions, history tracking, 
+                            and beautiful animations. Supports complex calculations, keyboard input, and 
+                            features a sleek modern interface.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-keyboard"></i>
+                                <span>Keyboard support</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-history"></i>
+                                <span>Calculation history</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-brain"></i>
+                                <span>Smart functions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="project-card" style="background-image: url('project3.jpg');">
-        <h3>HOMEY Furniture App</h3>
-        <p>Luxury Furniture app for selling a furniture and home decorations</p>
-        <a href="#" class="project-btn">🔗 View Demo</a>
-        <a href="https://github.com/yourusername/homey-furniture" target="_blank" class="project-btn">💻 View Code</a>
-      </div>
-
-      <div class="project-card" style="background-image: url('gamehub pro.jpg');">
-        <h3>GameHub Pro</h3>
-        <p>A Multi-Game platform with modern UI (Tic Tac Toe, Snake, Bird, Memory).</p>
-        <a href="mult game.html" target="_blank" class="project-btn">🎮 View Demo</a>
-        <a href="https://github.com/yourusername/gamehub-pro" target="_blank" class="project-btn">💻 View Code</a>
-      </div>
-        
-    
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Milestones and recognition in my journey</p>
+            </div>
+            <div class="achievements-grid">
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="achievement-icon">💻</div>
+                    <h3>First Game</h3>
+                    <p>Successfully created and deployed my first interactive game</p>
+                    <div class="achievement-year">2024</div>
+                </div>
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="achievement-icon">🤖</div>
+                    <h3>AI Implementation</h3>
+                    <p>Implemented minimax algorithm for unbeatable Tic Tac Toe AI</p>
+                    <div class="achievement-year">2025</div>
+                </div>
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="achievement-icon">🌟</div>
+                    <h3>Portfolio Launch</h3>
+                    <p>Launched professional portfolio with advanced animations</p>
+                    <div class="achievement-year">2025</div>
                 </div>
             </div>
         </div>
@@ -182,45 +638,76 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in touch</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to create something amazing together?</p>
+            </div>
             <div class="contact-content">
-                <div class="contact-text">
-                    <h2>Let's discuss</h2>
-                    <h3>on something <span class="cool">cool</span> together</h3>
-                    
-                    <div class="interest-section">
-                        <p>I'm interested in..</p>
-                        <div class="interest-buttons">
-                            <button class="interest-btn active" data-service="ecommerce">Ecommerce Website</button>
-                            <button class="interest-btn" data-service="saas">Saas Website</button>
-                            <button class="interest-btn" data-service="landing">Landing page</button>
-                            <button class="interest-btn" data-service="portfolio">Portfolio</button>
-                            <button class="interest-btn" data-service="blog">Blog Website</button>
+                <div class="contact-info">
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
+                        <h3>Email</h3>
+                        <p>AbhijnanSahariah18@gamil.com</p>
+                        <a href="mailto:AbhijnanSahariah18@gmail.com" class="contact-link">
+                            Send Message
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Abhijnan_s.1</p>
+                        <a href="#" class="contact-link">
+                            View Profile
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>github.com/Abhijnan1</p>
+                        <a href="#" class="contact-link">
+                            View Profile
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your name" required>
-                        <input type="email" placeholder="Your email" required>
-                        <textarea placeholder="Your message" required></textarea>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            Submit
+                <div class="contact-form" data-aos="fade-left" data-aos-delay="100">
+                    <form class="form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="input-focus"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="input-focus"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="input-focus"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="input-focus"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-particles"></div>
                         </button>
                     </form>
-                    
-                    <div class="contact-social">
-                        <a href="#" class="contact-social-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="contact-social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="contact-social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -231,15 +718,56 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="brand-text">Hi</span><span class="brand-dev">Dev</span>
+                    <div class="footer-logo">
+                        <span>AbhijnanSahariah</span>
+                    </div>
+                    <p>Building the future, one line of code at a time.</p>
+                    <div class="footer-social">
+                        <a href="AbhijnanSahariah1" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="Abhijnan-s.1" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="AbhijnanSahariah" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-                <p class="footer-text">
-                    Designed and built by <span class="highlight-pink">Abhijnan Sahariah</span> with 
-                    <span class="highlight-pink">Love</span> & <span class="highlight-pink">Respect</span>
-                </p>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Projects</h4>
+                        <a href="mult game.html">GameHub Pro</a>
+                        <a href="Index.html">Portfolio</a>
+                        <a href="calculator.html">Calculator</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="AbhijnanSahariah18@gmailmail.com">Email</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AbhijnanSahariah. Crafted with ❤️ and lots of ☕</p>
+                
+        
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
