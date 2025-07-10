@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijnan Shariah - Web Developer</title>
+    <title>Abhijnan Sahariah - Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,12 +19,12 @@
             </div>
             <div class="loading-text">Loading Experience...</div>
             <div class="loading-bar">
-                <div class="loading-progress"></div>
+                <div class="loading-progress" id="loadingProgress"></div>
             </div>
         </div>
     </div>
 
-    <!-- Cursor -->
+    <!-- Custom Cursor -->
     <div class="custom-cursor" id="cursor">
         <div class="cursor-dot"></div>
         <div class="cursor-outline"></div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#home" class="nav-link active" data-text="Home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-text="About">About</a></li>
                 <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
                 <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
@@ -51,21 +51,21 @@
                 <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
             </ul>
             <div class="nav-extras">
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                     <i class="fas fa-sun"></i>
                 </button>
-                <div class="hamburger" id="hamburger">
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Particle Background -->
-    <div class="particle-container" id="particleContainer"></div>
+    <canvas class="particle-container" id="particleCanvas"></canvas>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -78,24 +78,28 @@
                 <div class="shape shape-5"></div>
             </div>
         </div>
+        
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-greeting">
                     <span class="wave">👋</span>
                     <span class="greeting-text">Hello, I'm</span>
                 </div>
+                
                 <h1 class="hero-title">
-                    <span class="title-line">
-                        <span class="gradient-text typing-text" id="typingText">Abhijnan Sahariah</span>
-                    </span>
+                    <span class="gradient-text">Abhijnan Sahariah</span>
                 </h1>
+                
                 <div class="hero-roles">
                     <span class="role-text" id="roleText">Student Developer</span>
+                    <span class="cursor-blink">|</span>
                 </div>
+                
                 <p class="hero-description">
                     A passionate 14-year-old Class 9 student of PM SHRI KENDRIYA VIDYALAYA MANGALDOI exploring the infinite possibilities of code,
                     creating immersive games and building extraordinary digital experiences that inspire and amaze.
                 </p>
+                
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number" data-count="3">0</span>
@@ -105,8 +109,8 @@
                         <span class="stat-number" data-count="2">0</span>
                         <span class="stat-label">Years Learning</span>
                     </div>
-                
                 </div>
+                
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <span class="btn-text">Explore My Work</span>
@@ -117,26 +121,29 @@
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+                
                 <div class="social-links">
-                    <a href="AbhijnanSahariah1" class="social-link" data-tooltip="GitHub">
+                    <a href="https://github.com/AbhijnanSahariah1" target="_blank" rel="noopener noreferrer" class="social-link" data-tooltip="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="Abhijnan_s.1" class="social-link" data-tooltip="instagram">
+                    <a href="https://instagram.com/abhijnan_s.1" target="_blank" rel="noopener noreferrer" class="social-link" data-tooltip="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="AbhijnanSahariah18@gmail.com" class="social-link" data-tooltip="Email">
+                    <a href="mailto:AbhijnanSahariah18@gmail.com" class="social-link" data-tooltip="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
+            
             <div class="hero-visual">
                 <div class="profile-container">
                     <div class="profile-card-3d">
                         <div class="card-face card-front">
                             <div class="profile-avatar">
                                 <div class="avatar-glow"></div>
-                                <img src="Abhijnan1.jpg" alt="AbhijnanSahariah" class="profile-image">
-                                
+                                <div class="avatar-content">
+                                    <img src="Abhijnan1.jpg" alt="Abhijnan Sahariah" class="profile-image">
+                                </div>
                                 <div class="status-indicator">
                                     <div class="status-dot"></div>
                                     <span>Available for projects</span>
@@ -173,6 +180,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="floating-elements">
                     <div class="floating-icon" style="--delay: 0s">💻</div>
                     <div class="floating-icon" style="--delay: 1s">🎮</div>
@@ -181,6 +189,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="scroll-indicator">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
@@ -197,6 +206,7 @@
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Discovering the person behind the code</p>
             </div>
+            
             <div class="about-content">
                 <div class="about-text">
                     <div class="about-card" data-aos="fade-up" data-aos-delay="100">
@@ -208,6 +218,7 @@
                             transforming ideas into interactive digital experiences.
                         </p>
                     </div>
+                    
                     <div class="about-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-icon">💡</div>
                         <h3>What Drives Me</h3>
@@ -217,6 +228,7 @@
                             boundaries of what's possible with code.
                         </p>
                     </div>
+                    
                     <div class="about-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-icon">🌟</div>
                         <h3>Beyond Coding</h3>
@@ -227,6 +239,7 @@
                         </p>
                     </div>
                 </div>
+                
                 <div class="about-visual">
                     <div class="timeline">
                         <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
@@ -264,6 +277,7 @@
                 <h2 class="section-title">My Skills</h2>
                 <p class="section-subtitle">Technologies I've mastered and projects I've built</p>
             </div>
+            
             <div class="skills-content">
                 <div class="skills-grid">
                     <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
@@ -278,7 +292,7 @@
                                     <span class="skill-percentage">90%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
+                                    <div class="skill-progress" data-width="90"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -287,7 +301,7 @@
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
+                                    <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -296,7 +310,7 @@
                                     <span class="skill-percentage">80%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="80%"></div>
+                                    <div class="skill-progress" data-width="80"></div>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +328,7 @@
                                     <span class="skill-percentage">75%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="75%"></div>
+                                    <div class="skill-progress" data-width="75"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -323,7 +337,7 @@
                                     <span class="skill-percentage">80%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="80%"></div>
+                                    <div class="skill-progress" data-width="80"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -332,7 +346,7 @@
                                     <span class="skill-percentage">70%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="70%"></div>
+                                    <div class="skill-progress" data-width="70"></div>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +364,7 @@
                                     <span class="skill-percentage">75%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="75%"></div>
+                                    <div class="skill-progress" data-width="75"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -359,7 +373,7 @@
                                     <span class="skill-percentage">85%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="85%"></div>
+                                    <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -368,7 +382,7 @@
                                     <span class="skill-percentage">90%</span>
                                 </div>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-width="90%"></div>
+                                    <div class="skill-progress" data-width="90"></div>
                                 </div>
                             </div>
                         </div>
@@ -386,6 +400,7 @@
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Showcasing my best work and creative solutions</p>
             </div>
+            
             <div class="projects-grid">
                 <!-- Project 1: GameHub Pro -->
                 <div class="project-card featured" data-aos="fade-up" data-aos-delay="100">
@@ -407,11 +422,11 @@
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="mult game.html" class="project-link" target="_blank">
+                                <a href="https://abhijnansahariah1.github.io/gamehub-pro" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fas fa-play"></i>
                                     <span>Play Games</span>
                                 </a>
-                                <a href="#" class="project-link">
+                                <a href="https://github.com/AbhijnanSahariah1/gamehub-pro" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fab fa-github"></i>
                                     <span>View Code</span>
                                 </a>
@@ -430,7 +445,7 @@
                             <span class="tag">HTML5</span>
                             <span class="tag">CSS3</span>
                             <span class="tag">JavaScript</span>
-                            
+                            <span class="tag">Canvas API</span>
                         </div>
                         <p class="project-description">
                             A comprehensive multi-game platform featuring four classic games with modern twists. 
@@ -480,11 +495,11 @@
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="Index.html" class="project-link"target="_blank">
+                                <a href="https://abhijnansahariah1.github.io/portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fas fa-external-link-alt"></i>
                                     <span>Live Demo</span>
                                 </a>
-                                <a href="#" class="project-link">
+                                <a href="https://github.com/AbhijnanSahariah1/portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fab fa-github"></i>
                                     <span>View Code</span>
                                 </a>
@@ -553,11 +568,11 @@
                         </div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="calculator.html" class="project-link"target="_blank">
+                                <a href="https://abhijnansahariah1.github.io/smart-calculator" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fas fa-calculator"></i>
                                     <span>Try Calculator</span>
                                 </a>
-                                <a href="#" class="project-link">
+                                <a href="https://github.com/AbhijnanSahariah1/smart-calculator" target="_blank" rel="noopener noreferrer" class="project-link">
                                     <i class="fab fa-github"></i>
                                     <span>View Code</span>
                                 </a>
@@ -611,21 +626,23 @@
                 <h2 class="section-title">Achievements</h2>
                 <p class="section-subtitle">Milestones and recognition in my journey</p>
             </div>
+            
             <div class="achievements-grid">
-                
-                <div class="achievement-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="100">
                     <div class="achievement-icon">💻</div>
                     <h3>First Game</h3>
                     <p>Successfully created and deployed my first interactive game</p>
                     <div class="achievement-year">2024</div>
                 </div>
-                <div class="achievement-card" data-aos="flip-left" data-aos-delay="300">
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="200">
                     <div class="achievement-icon">🤖</div>
                     <h3>AI Implementation</h3>
                     <p>Implemented minimax algorithm for unbeatable Tic Tac Toe AI</p>
                     <div class="achievement-year">2025</div>
                 </div>
-                <div class="achievement-card" data-aos="flip-left" data-aos-delay="400">
+                
+                <div class="achievement-card" data-aos="flip-left" data-aos-delay="300">
                     <div class="achievement-icon">🌟</div>
                     <h3>Portfolio Launch</h3>
                     <p>Launched professional portfolio with advanced animations</p>
@@ -643,6 +660,7 @@
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-subtitle">Ready to create something amazing together?</p>
             </div>
+            
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
@@ -650,36 +668,40 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email</h3>
-                        <p>AbhijnanSahariah18@gamil.com</p>
+                        <p>AbhijnanSahariah18@gmail.com</p>
                         <a href="mailto:AbhijnanSahariah18@gmail.com" class="contact-link">
                             Send Message
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+                    
                     <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
                         <div class="contact-icon">
                             <i class="fab fa-instagram"></i>
                         </div>
                         <h3>Instagram</h3>
                         <p>Abhijnan_s.1</p>
-                        <a href="#" class="contact-link">
+                        <a href="https://instagram.com/abhijnan_s.1" target="_blank" rel="noopener noreferrer" class="contact-link">
                             View Profile
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+                    
                     <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
                         <h3>GitHub</h3>
-                        <p>github.com/Abhijnan1</p>
-                        <a href="#" class="contact-link">
+                        <p>AbhijnanSahariah1</p>
+                        <a href="https://github.com/AbhijnanSahariah1" target="_blank" rel="noopener noreferrer" class="contact-link">
                             View Profile
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div class="contact-form" data-aos="fade-left" data-aos-delay="100">
+                    <form action="https://formsubmit.co/AbhijnanSahariah18@gmail.com" method="POST" />
                     <form class="form" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
@@ -705,6 +727,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
                             <div class="btn-particles"></div>
                         </button>
                     </form>
@@ -719,21 +742,22 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span>AbhijnanSahariah</span>
+                        <span>Abhijnan Sahariah</span>
                     </div>
                     <p>Building the future, one line of code at a time.</p>
                     <div class="footer-social">
-                        <a href="AbhijnanSahariah1" class="social-link">
+                        <a href="https://github.com/AbhijnanSahariah1" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="Abhijnan-s.1" class="social-link">
+                        <a href="https://instagram.com/abhijnan_s.1" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="AbhijnanSahariah" class="social-link">
+                        <a href="mailto:AbhijnanSahariah18@gmail.com" class="social-link">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
+                
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Navigation</h4>
@@ -742,34 +766,38 @@
                         <a href="#skills">Skills</a>
                         <a href="#projects">Projects</a>
                     </div>
+                    
                     <div class="footer-column">
                         <h4>Projects</h4>
-                        <a href="mult game.html">GameHub Pro</a>
-                        <a href="Index.html">Portfolio</a>
-                        <a href="calculator.html">Calculator</a>
+                        <a href="https://abhijnansahariah1.github.io/gamehub-pro" target="_blank" rel="noopener noreferrer">GameHub Pro</a>
+                        <a href="https://abhijnansahariah1.github.io/portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                        <a href="https://abhijnansahariah1.github.io/smart-calculator" target="_blank" rel="noopener noreferrer">Calculator</a>
                     </div>
+                    
                     <div class="footer-column">
                         <h4>Contact</h4>
-                        <a href="AbhijnanSahariah18@gmailmail.com">Email</a>
-                        <a href="#">Instagram</a>
-                        <a href="#">GitHub</a>
+                        <a href="mailto:AbhijnanSahariah18@gmail.com">Email</a>
+                        <a href="https://instagram.com/abhijnan_s.1" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://github.com/AbhijnanSahariah1" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 AbhijnanSahariah. Crafted with ❤️ and lots of ☕</p>
-                
-        
+                <p>&copy; 2025 Abhijnan Sahariah. Crafted with <span class="heart">❤️</span> and lots of <span class="coffee">☕</span></p>
+                <span class="footer-easter-egg" id="footerEasterEgg">Click me for a surprise!</span>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
     <script src="script.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
